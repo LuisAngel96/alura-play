@@ -54,8 +54,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.3em;
-    justify-content:;
-}
+} 
 
 .menu__lista:nth-child(2),
 .menu__lista:nth-child(3),
@@ -73,5 +72,63 @@
     /* Rodapíe */
     .rodapie__container{
         justify-content: space-between;
+    }
+
+    /* Menu lateral para tablets */
+    .menu__container{
+        top: 80px;
+        height: auto;
+        width: 80px;
+    }
+    
+    .menu__lista{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2em;
+        gap: 4em;
+    }
+    
+}
+
+@media (min-width: 1440px){
+
+    /* Menu lateral */
+    .menu__container{
+        width: 239px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4){
+        display: flex;
+    }
+
+    .menu__lista{
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 1.8em;
+    }
+
+    .menu__lista:nth-child(3){
+        flex-direction: column-reverse;
+    }
+
+    .menu__itens{
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5em;
+    }
+
+    .videojuegos{
+        order: 3;
+    }
+
+    .peliculas{
+        order: 2;
+    }
+
+    .premium{
+        order: 1;
     }
 }
